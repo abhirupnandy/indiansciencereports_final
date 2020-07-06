@@ -10,8 +10,13 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <!-- Datatable CSS -->
-    <link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <!--ChartJS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
 
 </head>
 
@@ -71,9 +76,9 @@
 					</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="prod_overview.php">Overview</a>
-						<a class="dropdown-item" href="#">Overall</a>
-						<a class="dropdown-item" href="#">Thematic Areas</a>
-						<a class="dropdown-item" href="#">Discipline Based</a>
+						<a class="dropdown-item" href="prod_overall.php">Overall</a>
+						<a class="dropdown-item" href="prod_thematic.php">Thematic Areas</a>
+						<a class="dropdown-item" href="prod_discipline.php">Discipline Based</a>
 					</div>
 				</li>
 				<!-- Dropdown -->

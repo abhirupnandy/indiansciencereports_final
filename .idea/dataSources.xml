@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Indian Science Report" uuid="16328b48-9154-4305-842d-1445d911a922">
+    <data-source source="LOCAL" name="ISR" uuid="02091780-3e5c-4716-aaea-9ce23b05b394">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
