@@ -87,8 +87,8 @@
 						International Collaboration
 					</a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">Overall</a>
-						<a class="dropdown-item " href="#">Institution-wise</a>
+						<a class="dropdown-item" href="inter_overall.php">Overall</a>
+						<a class="dropdown-item " href="inter_collab.php">Institution-wise</a>
 					</div>
 				</li>
 				<li class="nav-item">

@@ -42,7 +42,7 @@
 </div>
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl  ">
         <div class="modal-content">
             <div class="modal-header bg-dark text-white">
                 <h3 id="modalTitle"></h3>
@@ -51,12 +51,36 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div id="modaltable"></div>
-                <div id="modalchart-1"  >
-                    <canvas id="myChart1" width="30" height="30"></canvas>
+                <div id="modaltable">
+                    <table id="table-1" class="table table-striped
+                    table-responsive     table-bordered table-sm">
+                        <thead class="table-dark">
+                            <tr>
+                                <th width="7%">Discipline</th>
+                                <th>(AGR)</th>
+                                <th>(AH)</th>
+                                <th>(BIO)</th>
+                                <th>(CHEM)</th>
+                                <th>(ENG)</th>
+                                <th>(ENV)</th>
+                                <th>GEO)</th>
+                                <th>(INF)</th>
+                                <th>(MAR)</th>
+                                <th>(MAT)</th>
+                                <th>(MED)</th>
+                                <th>(MUL)</th>
+                                <th>(PHY)</th>
+                                <th>(SS)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-1-body"></tbody>
+                    </table>
                 </div>
-                <div id="modalchart-2" >
-                    <canvas id="myChart2" width="30" height="30"></canvas>
+                <div id="modalchart-1" class="py-2 " style="position: relative; height:60vh; width:80vw">
+                    <canvas id="myChart1" height="300px"></canvas>
+                </div>
+                <div id="modalchart-2"  class="py-2" style="position: relative; height:60vh; width:80vw">
+                    <canvas id="myChart2" ></canvas>
                 </div>
             </div>
             <div class="modal-footer">
@@ -80,7 +104,7 @@
             'searching': true,
             'paginate': true,
             'ajax': {
-                'url':'prod_overall_table_ajax.php',
+                'url':'scripts/prod_overall_table_ajax.php',
                 'data': function (d) {
                     d.min = gmin;
                     d.max = gmax;
@@ -123,6 +147,9 @@
     });
 </script>
 <script>
+    var data = Array();
+    var rowSum = Array();
+    var colSum = Array();
     $("#myModal").on('show.bs.modal', function (e) {
         var triggerLink = $(e.relatedTarget);
         var inst = triggerLink.data("inst");
@@ -130,84 +157,103 @@
         var max = triggerLink.data("max");
 
         $("#modalTitle").text(inst+" ( "+min+" - "+max+" )");
-        //$(this).find(".modal-body").html('<canvas id="myChart" width="400" height="400"></canvas>');
-        $("#modaltable").html("Hello")
-    });
-</script>
-<script>
-    var ctx1 = document.getElementById('myChart1').getContext('2d');
-    var ctx2 = document.getElementById('myChart2').getContext('2d');
-    var myChart1 = new Chart(ctx1, {
-        type: 'line',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
+        $.ajax({
+            url: 'scripts/prod_overall_modal_ajax.php',
+            type: 'post',
+            data: {inst:inst,min:min,max:max},
+            success: function(response){
+                $('#table-1-body tr').remove();
+                $('#table-1-body').append(response);
+                $("table#table-1 tr").each(function(i, v){
+                    data[i] = Array();
+                    $(this).children('td').each(function(ii, vv){
+                        data[i][ii] = parseInt($(this).text());
+                    });
+                })
+                data.shift();
+                data.forEach(a => a.splice(0, 1));
+                rowSum = data.map(r => r.reduce((a, b) => a + b));
+                colSum = data.reduce((a, b) => a.map((x, i) => x + b[i]));
+                var years = Array();
+                for (var i = min; i <= max; i++) {
+                    years.push(i);
+                }
+                var ctx1 = document.getElementById('myChart1').getContext('2d');
+                var myChart1 = new Chart(ctx1, {
+                    type: 'line',
+                    data: {
+                        labels: years,
+                        datasets: [{
+                            label: 'Total Papers',
+                            data: rowSum,
+                            borderColor: "#1a67ed",
+                            fill: 'none',
+                            pointRadius: 0,
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        scales: {
+                            xAxes: [{
+                                gridLines: {
+                                    display:false
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                boxWidth: 80,
+                                fontColor: 'black'
+                            }
+                        }
                     }
-                }]
-            }
-        }
-    });
-    var myChart1 = new Chart(ctx2, {
-        type: 'radar',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
+                });
+                var ctx2 = document.getElementById('myChart2').getContext('2d');
+                var myChart2 = new Chart(ctx2, {
+                    type: 'radar',
+                    data: {
+                            labels: ['AGR','AH','BIO','CHEM','ENG','ENV','GEO',
+                                'INF','MAR','MAT','MED','MUL','PHY','SS'],
+                        datasets: [{
+                            label: 'Total Papers',
+                            data: colSum,
+                            borderColor: "red",
+                            fill: 'none',
+                            pointRadius: 0,
+                        }],
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        scale: {
+                            ticks: {
+                                maxTicksLimit: 5,
+                            },
+                            gridLines: {
+                                color: 'lightgray'
+                            },
+                            angleLines: {
+                                color: 'transparent'
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                boxWidth: 80,
+                                fontColor: 'black'
+                            }
+                        }
                     }
-                }]
+                });
             }
-        }
+        });
+        
     });
 </script>
