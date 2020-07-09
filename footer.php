@@ -2,7 +2,7 @@
     <div style="min-height: 150px"></div>
     <footer class="container-fluid bg-dark py-2 w-100 footer"
     style="min-height: 80px">
-        <div class="row">
+        <div class="row pt-3">
             <div class="col-12 col-sm offset-sm-2">
                 <a type="button" href="#" class="link">
                     <span class="link">Terms of Use</span></a>
@@ -12,7 +12,7 @@
                     <span class="link">About the Portal</span></a>
             </div>
             <div class="col-12 col-sm-5 copyright">
-                <span class="text-sm-center">Copyright © 2019, All Right Reserved Indian Science Report</span>
+                <span class="text-sm-center">Copyright © 2019, All Right Reserved Indian Science Reports</span>
             </div>
         </div>
     </footer>
@@ -42,11 +42,16 @@
                         </div>
                         <div class="col-sm-auto">
                             <div class="form-check">
-                                <label>
-                                    <input class="form-check-input" type="checkbox">
-                                </label>
-                                <label class="form-check-label"> Remember me
-                                </label>
+                                <div class="row">
+                                    <div class="col-2 col-sm-1 pt-2" >
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <div class="col col-sm">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                                
+                                
                             </div>
                         </div>
                         <br>

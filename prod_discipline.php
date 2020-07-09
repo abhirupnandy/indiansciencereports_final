@@ -129,7 +129,6 @@
                         'data-target="#myModal">Show</button>'} }
 
             ],
-            "lengthMenu": [[5, 10, 25, 50], [5, 10, 25, 50]],
         });
     });
 </script>
