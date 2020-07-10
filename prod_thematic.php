@@ -20,7 +20,7 @@
 								<option value="" selected>Select a Discipline</option>
 								<?php
                                     include "scripts/config.php";
-                                    $stmt = $conn->prepare("SELECT DISTINCT Disciplines AS disc FROM Discipline_Thematic_Areas");
+                                    $stmt = $conn->prepare("SELECT DISTINCT Disciplines AS disc FROM discipline_thematic_areas");
                                     $stmt->execute();
                                     $results = $stmt->fetchAll();
                                     foreach ($results as $row){
