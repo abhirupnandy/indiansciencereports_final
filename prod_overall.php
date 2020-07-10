@@ -188,7 +188,6 @@
                             data: rowSum,
                             borderColor: "#1a67ed",
                             fill: 'none',
-                            pointRadius: 0,
                         }]
                     },
                     options: {
