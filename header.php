@@ -104,13 +104,13 @@
 					<a class="nav-link" href="publication.php">Publications</a>
 				</li>
 				<!-- Search Bar -->
-                <li class="nav-item">
-                    <form class="form-inline" method="get" action="search_page.php">
-                        <input class="form-control form-control-sm ml-3 w-75 search" type="text"
-                                   placeholder="Search for Institutes"><i class="fa fa-search"></i>
-                    </form>
+                <li class="nav-item py-0">
+                    <a class="btn btn-sm btn-outline-light" href="search_page.php">
+                        <i class="fa fa-search"></i></a>
                 </li>
 			</ul>
+   
 		</div>
 	</nav>
+    <div id="display" style="z-index: 10;position:absolute;"></div>
 <!-- End Headers -->

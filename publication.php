@@ -33,7 +33,7 @@
                table-hover table-striped compact">
             <thead class="table-dark">
             <tr>
-                <th itemid="0"></th>
+                <th itemid="0">Info</th>
                 <th itemid="1">Title</th>
                 <th itemid="2">Authors</th>
                 <th itemid="3">Journal</th>

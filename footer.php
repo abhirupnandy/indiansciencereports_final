@@ -29,6 +29,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <h1 class="text-center text-danger font-weight-bolder py-5">Page under Construction</h1>
+                    <h3 class="text-center text-success font-weight-bolder py-5">Please wait</h3>
+                    <!--
                     <form>
                         <div class="form-group col-sm-auto">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -61,6 +64,7 @@
                             <button type="submit" class="btn btn-dark btn-md mr-1">Sign in</button>
                         </div>
                     </form>
+                    -->
                 </div>
             </div>
         </div>
@@ -79,6 +83,5 @@
     <script src="js/jquery.dataTables.min.js"></script>
     <!-- ChartJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-
     </body>
 </html>
