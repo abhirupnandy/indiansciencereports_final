@@ -1,3 +1,10 @@
+<style>
+    .carousel-caption {
+        position: relative;
+        left: auto;
+        right: auto;
+    }
+</style>
 <!--Footer Row-->
     <div style="min-height: 150px"></div>
     <footer class="container-fluid bg-dark py-2 w-100 footer"
@@ -128,7 +135,7 @@
 
 <!-- About us -->
 <div id="aboutModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-md">
+    <div class="modal-dialog modal-sm">
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header bg-dark">
@@ -139,7 +146,127 @@
             </div>
             <div class="modal-body">
                 <h5 class="h5 text-center text-secondary">The Indian Science Research Group</h5>
-                
+                <div class="bd-example">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/researchers/vivek.jpg" class="d-block w-100" alt="Vivek Kumar Singh"
+                                     style="height: 276px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Vivek Kumar Singh</h5>
+                                    <h7>Project Coordinator</h7>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/abhirup.jpg" class="d-block w-100" alt="Abhirup Nandy"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Abhirup Nandy</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/Ashraf.jpg" class="d-block w-100" alt="Ashraf Uddin"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Ashraf Uddin</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/JyotiDua.jpg" class="d-block w-100" alt="Jyoti Dua"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Jyoti Dua</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/JyotiPaswan.jpg" class="d-block w-100" alt="Jyoti Paswan"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Jyoti Paswan</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/Madhavi.jpg" class="d-block w-100" alt="Madhavi Devaraj"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Madhavi Devaraj</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/Mousumi.jpg" class="d-block w-100" alt="Mousumi Karmakar"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Mousumi Karmakar</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/Prashasti.jpg" class="d-block w-100" alt="Prashasti Singh"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Prashasti Singh</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/Rajesh.jpg" class="d-block w-100" alt="Rajesh Piryani"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Rajesh Piryani</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/satya.jpg" class="d-block w-100" alt="Satya Swarup"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Satya Swarup</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/shipra.jpg" class="d-block w-100" alt="Shipra Khattri"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Shipra Khattri</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/solanki.jpeg" class="d-block w-100" alt="Solanki Gupta"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Solanki Gupta</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/Sumit.jpg" class="d-block w-100" alt="Sumit Kumar Banshal"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Sumit Kumar Banshal</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/TanuSolanki.jpg" class="d-block w-100" alt="Tanu Solanki"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Tanu Solanki</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/researchers/Vedika.png" class="d-block w-100" alt="Vedika Gupta"
+                                     style="height: 300px !important;">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Vedika Gupta</h5>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-dark btn-sm" data-dismiss="modal" aria-hidden="true">Close</button>

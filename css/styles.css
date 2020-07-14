@@ -99,3 +99,8 @@ caption {
     margin-right: auto;
     display: block;
 }
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+}
