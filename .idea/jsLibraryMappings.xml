@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{Chart.js, dataTables.bootstrap4, dataTables.responsive, jquery.dataTables, responsive.bootstrap4}" />
+    <file url="PROJECT" libraries="{Chart.js, dataTables.bootstrap4, dataTables.responsive, embed, jquery.dataTables, responsive.bootstrap4}" />
   </component>
 </project>

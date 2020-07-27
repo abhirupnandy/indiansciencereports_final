@@ -11,5 +11,6 @@
     <orderEntry type="library" name="dataTables.responsive" level="application" />
     <orderEntry type="library" name="responsive.bootstrap4" level="application" />
     <orderEntry type="library" name="Chart.js" level="application" />
+    <orderEntry type="library" name="embed" level="application" />
   </component>
 </module>

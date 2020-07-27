@@ -1,5 +1,5 @@
 <?php include "header.php";?>
-
+<script src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 <style>
     .table-filter-container {
         text-align: right;
@@ -61,8 +61,14 @@
             </div>
             <div class="modal-body"></div>
             <div class="modal-footer">
-                
-                <button class="btn btn-dark btn-sm" data-dismiss="modal" aria-hidden="true">Close</button>
+                <div class="row">
+                    <div class="col-sm-4" id="alt">
+                    
+                    </div>
+                    <div class="col-sm-3 px-4">
+                        <button class="btn btn-dark btn-sm" data-dismiss="modal" aria-hidden="true">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,7 +106,7 @@
                 { data: 'vol' },
                 { data: 'issue'  },
                 { data: 'page'  },
-                { data: 'category' }
+                { data: 'category' },
             ],
             "columnDefs": [
                 {
@@ -139,20 +145,22 @@
         var doi = triggerLink.data("doi");
         var cat = triggerLink.data("category");
 
-        $("#modalTitle").text(title);
-        $(this).find(".modal-body").html("<h6>Authors: <b>" + author + "</b></h6>" +
-            "<h6>Journal / Conference :  <b>" + journal + "</b></h6>" +
-            "<h6>Categories :  <b>" + cat + "</b></h6>" +
-            "<div class='row'><div class='col'> "+
-            "<h6>Vol:  <b>" + vol + "</b></div>" +
-            "<div class='col'>Issue :  <b>" + issue + "</b></div>" +
-            "<div class='col'>Pages :  <b>" + page + "</b></h6></div></div>" +
-            "<div class='row'><div class='col'> "+
-            "<h6>Year:  <b>" + year + "</b></div>" +
-            "<div class='col'>DOI :  <b>" + doi + "</b></h6></div></div>" +
-            "<br><h6><div class='row'> <div class='col-12 col-sm-9 font-weight-bold text-center'>Abstract</div> " +
-            "<div class='col'> <a class='link btn-sm btn btn-outline-dark' target='_blank'" +
-            " href='"+ url + "'> Visit Publisher page</a></div></div> " +
-            "<br>" +abstract+ "</h6>");
+        $("#modalTitle").html(title);
+        $(this).find(".modal-body").html('<h6>Authors: <b>' + author + '</b></h6>' +
+            '<h6>Journal / Conference :  <b>' + journal + '</b></h6>' +
+            '<h6>Categories :  <b>' + cat + '</b></h6>' +
+            '<div class="row"><div class="col">'+
+            '<h6>Vol:  <b>' + vol + '</b></div>' +
+            '<div class="col">Issue :  <b>' + issue + '</b></div>' +
+            '<div class="col">Pages :  <b>' + page + '</b></h6></div></div>' +
+            '<div class="row"><div class="col"> '+
+            '<h6>Year:  <b>' + year + '</b></div>' +
+            '<div class="col">DOI :  <b>' + doi + '</b></h6></div></div>' +
+            '<br><h6><div class="row">' +
+            ' <div class="col-12 col-sm-7 font-weight-bold text-right mr-5">Abstract</div> ' +
+            '<div class="col"> <a class="link btn-sm btn btn-outline-dark ml-3" target="_blank"' +
+            ' href="'+ url + '"> Visit Publisher page</a></div>' +
+            '</div></div><br></h6><h7>' +abstract+ '</h7>');
+        $("#alt").html('<div data-badge-type="donut" data-doi="10.1038/nature.2014.14583" data-hide-no-mentions="true" class="altmetric-embed order-first"></div>');
     });
 </script>
