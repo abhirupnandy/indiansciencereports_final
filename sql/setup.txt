@@ -1,0 +1,9 @@
+ID 1 :  name            -   admin
+        password        -   webhost@123
+        permissions     -   grant all, including grant option
+######################################################################################
+ID 2 :  name            -   guest
+        password        -   guest@123
+        permission      -   grant only select
+######################################################################################
+database:           indian_science

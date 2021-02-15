@@ -76,10 +76,10 @@
                         <tbody id="table-1-body"></tbody>
                     </table>
                 </div>
-                <div id="modalchart-1" class="py-2 " style="position: relative; height:60vh; width:80vw">
+                <div id="modalchart-1" class="py-2 col-12" style="position: relative; height:60vh; width:80vw">
                     <canvas id="myChart1" height="300px"></canvas>
                 </div>
-                <div id="modalchart-2"  class="py-2" style="position: relative; height:60vh; width:80vw">
+                <div id="modalchart-2"  class="py-2 col-12" style="position: relative; height:60vh; width:80vw">
                     <canvas id="myChart2" ></canvas>
                 </div>
             </div>
